@@ -358,12 +358,12 @@ int main(int argc, char const *argv[])
 	}
 
 	// 暂停测试
-	// SIGCAM = SIGTOUCH = SIGRFID = SIGPAUSE;
-	// for (int i = 10; i > 0; i--)
-	// {
-	// 	// 直接sleep(10)会导致代码阻塞，子线程无法正常输出
-	// 	sleep(1);
-	// }
+	SIGCAM = SIGTOUCH = SIGRFID = SIGPAUSE;
+	for (int i = 5; i > 0; i--)
+	{
+		// 直接sleep(10)会导致代码阻塞，子线程无法正常输出
+		sleep(1);
+	}
 
 	// 结束线程准备退出
 	SIGCAM = SIGTOUCH = SIGRFID = SIGEXIT;
